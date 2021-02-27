@@ -36,7 +36,6 @@ btn.place(rely=0.75, relx=0.9, anchor='center')
 def download_video(url):
     yt = YouTube(url, on_progress_callback=progress)
     try:
-        # stream = yt.streams.get_highest_resolution()
         stream = yt.streams.filter(res="720p").first()
     except:
         try:
@@ -48,25 +47,24 @@ def download_video(url):
     print('\nThe video is saved in ' + os.getcwd() + '\YT downloads')
 
 
-def progress(stream, chunk, remains):  # 'chunk' must exist
+def progress(stream, chunk, remains):  
     total = stream.filesize
     percent = (total - remains) / total * 100
-    # print('Downloading… {:05.2f}%'.format(percent), end='\r')
     print('Download progress = [' + '▉' * int(percent / 5),
           ' ' * (20 - int(percent / 5)) + '] ' + '{:05.2f}%'.format(percent), end='\r')
 
 def download_playlist(urls):
     p = Playlist(urls)
     print('Playlist urls = ' + str(p))
-    for url in p.video_urls: #run 1 time instead of multiple times
+    for url in p.video_urls: 
         print('\nDownloading ' + url)
         download_video(url)
 
 
 def check_playlist(urls):
-    if 'playlist?list=' in str(urls): #is a playlist
+    if 'playlist?list=' in str(urls): 
         download_playlist(urls)
-    else:  #not a playlist
+    else:  
         download_video(urls)
         
 
