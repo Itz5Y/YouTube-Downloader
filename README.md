@@ -3,18 +3,18 @@ Welcome to the YouTube-Downloader wiki!
 This program downloads YouTube videos and saves to your local computer!  
 ![](https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/128/youtube.png)
 
-I uploaded 1 application file(.exe) if you don't want to install extra things like external libraries; and
-           1 Python(.py) file if you want to inspect the code.  
+I uploaded 1 Python(.py) file if you want to inspect the code; and  
+           1 application file(.exe) if you don't want to install extra things like external libraries. (Currently Windows Defender will block it, you need to "allow" it in order            to run it)  
 
 ## ⚙ Features
-* You can download videos when you have access to the Internet, then watch them later without Internet connection
-* You can download footage, then include them in further uses
-* You can download music, then listen to them without any streaming service
-* You can download videos, then watch them without Ad
-* Simple to use
-* Small file size
-* User friendly
-
+* You can download videos when you have access to the Internet, then watch them later without Internet connection  
+* You can download footage, then include them in further uses  
+* You can download music, then listen to them without any streaming service  
+* You can download videos, then watch them without Ad  
+* Simple to use  
+* Small file size  
+* User friendly  
+  
 
 ## ❓ How to use
 1. Input the URL of a video/playlist
