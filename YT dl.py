@@ -39,7 +39,7 @@ def download_video(url):
         stream = yt.streams.filter(progressive=False, res='720p').first()
     except:
         try:
-            stream = yt.streams.filter(progressive=False,res='360p').first()
+            stream = yt.streams.filter(progressive=False, res='360p').first()
         except:
             stream = yt.streams.filter(progressive=False, res='240p').first()
     print("=========\nTitle:        " + yt.title + "\nResolution:   " + stream.resolution + "\n=========")
@@ -47,10 +47,9 @@ def download_video(url):
     print('\nThe video is saved in ' + os.getcwd() + '\YT downloads')
 
 
-def progress(stream, chunk, remains):  # 'chunk' must exist
+def progress(stream, chunk, remains):
     total = stream.filesize
     percent = (total - remains) / total * 100
-    # print('Downloading… {:05.2f}%'.format(percent), end='\r')
     print('Download progress = [' + '▉' * int(percent / 5),
           ' ' * (20 - int(percent / 5)) + '] ' + '{:05.2f}%'.format(percent), end='\r')
 
